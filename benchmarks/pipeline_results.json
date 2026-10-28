@@ -1,0 +1,19 @@
+{
+  "runs": 30,
+  "latency_ms": {
+    "mean": 70.05,
+    "p50": 69.79,
+    "p95": 72.17,
+    "max": 85.94
+  },
+  "resolved_rate": 1.0,
+  "execution_success_rate": 1.0,
+  "policies": {
+    "L1_ONCALL_APPROVED": 30
+  },
+  "pending": {
+    "runs": 6,
+    "resume_success_rate": 1.0,
+    "resume_latency_p50_ms": 69.64
+  }
+}

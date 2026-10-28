@@ -1,0 +1,531 @@
+{
+  "config": {
+    "metrics": [
+      "mysql_replication_lag_sec",
+      "mysql_connections_used_ratio",
+      "mysql_slow_query_qps",
+      "mysql_cpu_usage_percent",
+      "mysql_disk_used_ratio"
+    ],
+    "points": 600,
+    "warmup": 50,
+    "window_total": 16
+  },
+  "aggregate": [
+    {
+      "detector": "static_warn",
+      "tp": 82,
+      "fp": 0,
+      "fn": 36,
+      "precision": 1.0,
+      "recall": 0.6949,
+      "f1": 0.82,
+      "detected_windows": 15,
+      "median_delay_points": 2,
+      "window_detection_rate": 0.9375
+    },
+    {
+      "detector": "static_crit",
+      "tp": 25,
+      "fp": 0,
+      "fn": 93,
+      "precision": 1.0,
+      "recall": 0.2119,
+      "f1": 0.3497,
+      "detected_windows": 11,
+      "median_delay_points": 5,
+      "window_detection_rate": 0.6875
+    },
+    {
+      "detector": "3sigma",
+      "tp": 83,
+      "fp": 1,
+      "fn": 35,
+      "precision": 0.9881,
+      "recall": 0.7034,
+      "f1": 0.8218,
+      "detected_windows": 15,
+      "median_delay_points": 2,
+      "window_detection_rate": 0.9375
+    },
+    {
+      "detector": "mad",
+      "tp": 83,
+      "fp": 0,
+      "fn": 35,
+      "precision": 1.0,
+      "recall": 0.7034,
+      "f1": 0.8259,
+      "detected_windows": 15,
+      "median_delay_points": 2,
+      "window_detection_rate": 0.9375
+    },
+    {
+      "detector": "ensemble",
+      "tp": 82,
+      "fp": 2,
+      "fn": 36,
+      "precision": 0.9762,
+      "recall": 0.6949,
+      "f1": 0.8119,
+      "detected_windows": 15,
+      "median_delay_points": 0,
+      "window_detection_rate": 0.9375
+    }
+  ],
+  "false_alarms_per_1000_mean": {
+    "static_warn": 0.0,
+    "static_crit": 0.0,
+    "3sigma": 0.38,
+    "mad": 0.0,
+    "ensemble": 0.77
+  },
+  "details": [
+    {
+      "metric": "mysql_replication_lag_sec",
+      "detector": "static_warn",
+      "tp": 22,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 0,
+      "delays": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "metric": "mysql_connections_used_ratio",
+      "detector": "static_warn",
+      "tp": 16,
+      "fp": 0,
+      "fn": 6,
+      "precision": 1.0,
+      "recall": 0.7273,
+      "f1": 0.8421,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 2,
+      "delays": [
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "metric": "mysql_slow_query_qps",
+      "detector": "static_warn",
+      "tp": 20,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9091,
+      "f1": 0.9524,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 1,
+      "delays": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "metric": "mysql_cpu_usage_percent",
+      "detector": "static_warn",
+      "tp": 12,
+      "fp": 0,
+      "fn": 18,
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 0.75,
+      "median_delay_points": 3,
+      "delays": [
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_disk_used_ratio",
+      "detector": "static_warn",
+      "tp": 12,
+      "fp": 0,
+      "fn": 10,
+      "precision": 1.0,
+      "recall": 0.5455,
+      "f1": 0.7059,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 3,
+      "delays": [
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_replication_lag_sec",
+      "detector": "static_crit",
+      "tp": 8,
+      "fp": 0,
+      "fn": 14,
+      "precision": 1.0,
+      "recall": 0.3636,
+      "f1": 0.5333,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 4,
+      "delays": [
+        4,
+        6,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_connections_used_ratio",
+      "detector": "static_crit",
+      "tp": 4,
+      "fp": 0,
+      "fn": 18,
+      "precision": 1.0,
+      "recall": 0.1818,
+      "f1": 0.3077,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 0.6667,
+      "median_delay_points": 6.0,
+      "delays": [
+        5,
+        7
+      ]
+    },
+    {
+      "metric": "mysql_slow_query_qps",
+      "detector": "static_crit",
+      "tp": 8,
+      "fp": 0,
+      "fn": 14,
+      "precision": 1.0,
+      "recall": 0.3636,
+      "f1": 0.5333,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 4,
+      "delays": [
+        4,
+        6,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_cpu_usage_percent",
+      "detector": "static_crit",
+      "tp": 4,
+      "fp": 0,
+      "fn": 26,
+      "precision": 1.0,
+      "recall": 0.1333,
+      "f1": 0.2353,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 0.5,
+      "median_delay_points": 6.0,
+      "delays": [
+        5,
+        7
+      ]
+    },
+    {
+      "metric": "mysql_disk_used_ratio",
+      "detector": "static_crit",
+      "tp": 1,
+      "fp": 0,
+      "fn": 21,
+      "precision": 1.0,
+      "recall": 0.0455,
+      "f1": 0.087,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 0.3333,
+      "median_delay_points": 9,
+      "delays": [
+        9
+      ]
+    },
+    {
+      "metric": "mysql_replication_lag_sec",
+      "detector": "3sigma",
+      "tp": 19,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.8636,
+      "f1": 0.9268,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 1,
+      "delays": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "metric": "mysql_connections_used_ratio",
+      "detector": "3sigma",
+      "tp": 16,
+      "fp": 0,
+      "fn": 6,
+      "precision": 1.0,
+      "recall": 0.7273,
+      "f1": 0.8421,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 1,
+      "delays": [
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_slow_query_qps",
+      "detector": "3sigma",
+      "tp": 18,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.8182,
+      "f1": 0.9,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 2,
+      "delays": [
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "metric": "mysql_cpu_usage_percent",
+      "detector": "3sigma",
+      "tp": 14,
+      "fp": 1,
+      "fn": 16,
+      "precision": 0.9333,
+      "recall": 0.4667,
+      "f1": 0.6222,
+      "false_alarms_per_1000": 1.92,
+      "window_detection_rate": 0.75,
+      "median_delay_points": 2,
+      "delays": [
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_disk_used_ratio",
+      "detector": "3sigma",
+      "tp": 16,
+      "fp": 0,
+      "fn": 6,
+      "precision": 1.0,
+      "recall": 0.7273,
+      "f1": 0.8421,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 2,
+      "delays": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "metric": "mysql_replication_lag_sec",
+      "detector": "mad",
+      "tp": 22,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 0,
+      "delays": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "metric": "mysql_connections_used_ratio",
+      "detector": "mad",
+      "tp": 13,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.5909,
+      "f1": 0.7429,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 3,
+      "delays": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_slow_query_qps",
+      "detector": "mad",
+      "tp": 21,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9545,
+      "f1": 0.9767,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 0,
+      "delays": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "metric": "mysql_cpu_usage_percent",
+      "detector": "mad",
+      "tp": 11,
+      "fp": 0,
+      "fn": 19,
+      "precision": 1.0,
+      "recall": 0.3667,
+      "f1": 0.5366,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 0.75,
+      "median_delay_points": 3,
+      "delays": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "metric": "mysql_disk_used_ratio",
+      "detector": "mad",
+      "tp": 16,
+      "fp": 0,
+      "fn": 6,
+      "precision": 1.0,
+      "recall": 0.7273,
+      "f1": 0.8421,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 2,
+      "delays": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "metric": "mysql_replication_lag_sec",
+      "detector": "ensemble",
+      "tp": 21,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9545,
+      "f1": 0.9767,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 0,
+      "delays": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "metric": "mysql_connections_used_ratio",
+      "detector": "ensemble",
+      "tp": 14,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.6364,
+      "f1": 0.7778,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 2,
+      "delays": [
+        2,
+        0,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_slow_query_qps",
+      "detector": "ensemble",
+      "tp": 18,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.8182,
+      "f1": 0.9,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 0,
+      "delays": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "metric": "mysql_cpu_usage_percent",
+      "detector": "ensemble",
+      "tp": 11,
+      "fp": 2,
+      "fn": 19,
+      "precision": 0.8462,
+      "recall": 0.3667,
+      "f1": 0.5116,
+      "false_alarms_per_1000": 3.85,
+      "window_detection_rate": 0.75,
+      "median_delay_points": 3,
+      "delays": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "metric": "mysql_disk_used_ratio",
+      "detector": "ensemble",
+      "tp": 18,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.8182,
+      "f1": 0.9,
+      "false_alarms_per_1000": 0.0,
+      "window_detection_rate": 1.0,
+      "median_delay_points": 0,
+      "delays": [
+        0,
+        0,
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "files": 18,
+    "lines": 4088,
+    "non_empty_lines": 3531
+  },
+  "tests": {
+    "files": 12,
+    "lines": 1555,
+    "count": 108
+  },
+  "benchmarks": {
+    "files": 3,
+    "lines": 392
+  },
+  "playbooks": 14,
+  "knowledge_graph": {
+    "nodes": 13,
+    "edges": 17,
+    "node_types": {
+      "gateway": 1,
+      "service": 4,
+      "proxy": 1,
+      "database": 3,
+      "cache": 1,
+      "host": 3
+    }
+  }
+}

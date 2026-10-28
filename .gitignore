@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+uv.lock
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# Test and lint caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+.mini-coding-agent
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Local scratch space
+tmp/
+.worktrees/
+.pico/
+artifacts/
+readme_intro_locked/
+
+# Local runtime data (audit chain, checkpoints)
+var/
+.env
+
+# 个人简历：含手机号/邮箱，不提交到公开仓库
+resume/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Packaging metadata
+pico.egg-info/
+
+# claude
+.claude/
+CLAUDE.md

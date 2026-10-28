@@ -1,0 +1,20 @@
+# 核心运行时
+fastapi==0.115.12
+uvicorn==0.34.2
+pydantic==2.11.1
+pydantic-settings==2.15.0
+
+# 数值与异常检测
+numpy==2.2.4
+scikit-learn==1.6.1
+# 注意：scipy 1.15.x 的 _sparsetools 在部分 Windows 机器上会被
+# 应用程序控制策略拦截（DLL load failed），1.14.1 可正常加载
+scipy==1.14.1
+
+# 测试
+pytest==9.2.0
+pytest-asyncio==1.4.1
+httpx==0.28.1
+
+# 可选：Kafka / Neo4j 适配层（不安装也能用内存实现跑通全流程）
+# pip install -r requirements-optional.txt
