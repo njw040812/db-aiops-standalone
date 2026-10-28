@@ -3,9 +3,10 @@
 > 把「告警 → 根因 → 修复提案 → 变更审批 → 执行」做成一条可回放、可审计、可阻断的流水线。
 > 面向 MySQL 一主两从场景，Python 单语言实现，不依赖外部服务即可完整跑通。
 
-> **来源说明**：本项目基于开源项目
-> [bcefghj/multi-agent-aiops](https://github.com/bcefghj/multi-agent-aiops)（MIT）的 Python 实现
-> 二次开发，原项目版权归原作者，本仓库修改部分归倪建伟。具体改动见文末「来源与致谢」。
+> **来源说明**：本仓库是开源项目
+> [bcefghj/multi-agent-aiops](https://github.com/bcefghj/multi-agent-aiops)（MIT）的 GitHub fork，
+> 在其 Python 实现基础上二次开发。原项目版权归原作者，本仓库修改部分归倪建伟。
+> 具体改动见文末「来源与致谢」。
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Tests](https://img.shields.io/badge/tests-108%20passed-brightgreen)
@@ -336,10 +337,12 @@ L0 且 ≤ 0.30 自动放行；L1 且 ≤ 0.55 当班批准；L2 一律生成工
 
 ## 12. 来源与致谢
 
-本仓库是二次开发项目，不是从零实现的原创仓库：
+本仓库是 [bcefghj/multi-agent-aiops](https://github.com/bcefghj/multi-agent-aiops) 的 GitHub fork，
+不是从零实现的原创仓库：
 
 - **原项目**：[bcefghj/multi-agent-aiops](https://github.com/bcefghj/multi-agent-aiops)
   （作者 `bcefghj`，MIT 许可，原仓库声明可自由用于学习、修改和面试展示）
+- **仓库关系**：GitHub fork（forked from `bcefghj/multi-agent-aiops`）
 - **本仓库范围**：只基于原项目的 Python 实现，未使用其 Java / Go 实现
 - **原项目版权**：归 `bcefghj` 所有；本仓库的修改部分归倪建伟
 - **改动说明**：重构为面向 MySQL 的 5 节点两阶段审批流程，接入知识图谱，
