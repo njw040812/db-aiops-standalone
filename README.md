@@ -3,6 +3,10 @@
 > 把「告警 → 根因 → 修复提案 → 变更审批 → 执行」做成一条可回放、可审计、可阻断的流水线。
 > 面向 MySQL 一主两从场景，Python 单语言实现，不依赖外部服务即可完整跑通。
 
+> **来源说明**：本项目基于开源项目
+> [bcefghj/multi-agent-aiops](https://github.com/bcefghj/multi-agent-aiops)（MIT）的 Python 实现
+> 二次开发，原项目版权归原作者，本仓库修改部分归倪建伟。具体改动见文末「来源与致谢」。
+
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Tests](https://img.shields.io/badge/tests-108%20passed-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -330,6 +334,20 @@ L0 且 ≤ 0.30 自动放行；L1 且 ≤ 0.55 当班批准；L2 一律生成工
 
 ---
 
+## 12. 来源与致谢
+
+本仓库是二次开发项目，不是从零实现的原创仓库：
+
+- **原项目**：[bcefghj/multi-agent-aiops](https://github.com/bcefghj/multi-agent-aiops)
+  （作者 `bcefghj`，MIT 许可，原仓库声明可自由用于学习、修改和面试展示）
+- **本仓库范围**：只基于原项目的 Python 实现，未使用其 Java / Go 实现
+- **原项目版权**：归 `bcefghj` 所有；本仓库的修改部分归倪建伟
+- **改动说明**：重构为面向 MySQL 的 5 节点两阶段审批流程，接入知识图谱，
+  重写检测策略、14 个 DBA Playbook、6 因子风险模型、哈希链审计，
+  补充 108 个测试、3 个评测脚本，并修正原项目中审批/执行时序等 15 个问题。
+  详见 [docs/engineering-notes.md](docs/engineering-notes.md)。
+- **声明**：本仓库不是原项目的官方版本，也不代表原作者的观点。
+
 ## License
 
-MIT，见 [LICENSE](LICENSE)。
+MIT，见 [LICENSE](LICENSE)。原作者的版权声明与本仓库修改部分的声明均保留在该文件中。
